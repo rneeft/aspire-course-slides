@@ -228,3 +228,9 @@ https://www.rickneeft.dev/aspire-course-site/
 ```
 https://github.com/rneeft/workshop-avans-2-juni
 ```
+
+---
+
+# NServiceBus
+
+> TODO: Explain messages, endpoints how it works
