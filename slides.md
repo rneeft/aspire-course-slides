@@ -8,20 +8,19 @@ theme: my-theme
  
 ---
 
-![bg left:40%](img/me.jpeg)
+![bg 300% left:40%](img/me2.jpeg)
 
 # Rick Neeft
 
 ## Developer @VECOZO
 
 <i class="bi bi-linkedin"></i> LinkedIn: [rneeft](https://linkedin.com/in/rneeft)
-<i class="bi bi-github"></i> Blog: [rickneeft.dev](https://www.rickneeft.dev)
-<i class="bi bi-browser-chrome"></i> GitHub: [rneeft](https://github.com/rneeft)
+<i class="bi bi-browser-chrome"></i> Blog: [rickneeft.dev](https://www.rickneeft.dev)
+<i class="bi bi-github"></i> GitHub: [rneeft](https://github.com/rneeft)
 
 ---
 
-# VECOZO
-> TODO
+![bg](img/VECOZO.png)
 
 ---
 
@@ -81,50 +80,89 @@ theme: my-theme
 # Gymnastics
 - Who knows what Virtual machines are?
 
----
-
-# Theory
-A bit, don't worry
 
 ---
 
-# Deployment of software
+# Microservices & Containerisation met .NET Aspire
 
-> TODO Add timeline 
+### From Monoliths to Modern Deployment
 
----
-
-> TODO Remove
-
-# In the early days
-
-- Real hardware - Bare metal
-- Apache server / Internet Information Services (IIS)
-
----
-> TODO Remove
-
-# Virtual machines
-
-- (multiple) virtual OS on top of a OS -> hypervisor 
-- Real hardware virtualised
+The theory, just a little bit, I promise
 
 ---
 
-# Today Docker
+# In the early days: Monoliths
+
+![bg right:40%](img/monolith.png)
+
+**What is a monolith?**
+
+- Single, unified codebase
+- All components tightly coupled
+
+**Challenges:**
+- Difficult to scale specific parts
+- Risky deployments (entire app goes down)
+- Long development and release cycles
+
+<sub><sup><sup><sup>Image from 2001: A Space Odyssey</sup></sup></sup></sub>
+
+---
+
+# The Rise of Microservices
+
+![bg left:40%](img/containers.jpg)
+
+**Why Microservices?**
+- Decouple components for flexibility
+- Faster independent deployments
+- Technology diversity per service
+
+**Key Principles:**
+- Single Responsibility per service
+- Communication over APIs or messaging
+- Independent scaling
+
+<sub><sup><sup><sup>Photo by Wolfgang Weiser: https://www.pexels.com/photo/container-ships-at-busy-hamburg-port-31637364/</sup></sup></sup></sub>
+
+---
+
+# Deploying Microservices
+
+**Key Features:**
+- Each service is deployed **independently**
+- Uses **containers** (e.g., Docker)
+- Orchestrated by platforms like **Kubernetes**
+- Updates via **CI/CD pipelines**
+
+**Common Stack:**
+- Docker → Package
+- Kubernetes → Deploy & Scale
+- CI/CD → Automate release (e.g., GitHub Actions, GitLab, Jenkins)
+
+---
+
+# What will we do today
+
+- Docker (compose) deployment
+- Use .NET Aspire
+
+---
+
+# Docker
 
 ![bg left:40% background-size: contain](img/docker-mark-blue.png)
 - Platform for developing, shipping and running application
 - Package with loosely isolated environments: containers
 - Containers are 'lightweight' and portable.
-- IS not virtual machine
 
 ---
-# Dockerfile
+# How? Dockerfile
 
-- Recipe
+- Like a Recipe
 - Describes how to build an docker image
 - Docker image: read-only instructions to create the container
+
 ---
 
 # Dockerfile - Example
@@ -157,18 +195,16 @@ ENTRYPOINT ["dotnet", "InsuranceDetails.Api.dll"]
 ---
 # Docker compose
 
-- If docker file is recipe -> Compose is your menu
+- If the **dockerfile** is a recipe then **Compose** is your menu
 
 ---
 
 # Docker compose - Example
-> TODO: 1433 default SQL server
-> TODO: Latest SQL server to speed up Aspire later on
 
 ```yml
 services:
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: mssql
     environment:
       SA_PASSWORD: YourStrongPassword123!
@@ -202,20 +238,32 @@ volumes:
 
 ---
 
-# The case for today
-> TODO: Explain Health insurance
-> TODO: Explain the problem
+# 🇳🇱 Dutch Healthcare System
+
+- Every citizen has **basic health insurance** (*Basisverzekering*)
+- You can add **supplementary insurance** (*Aanvullende verzekering*)
+  - e.g. dental care, physiotherapy, travel vaccinations
+- **Health insurers** = private companies (e.g. Menzis, CZ)
+- **Health providers** = GPs, hospitals, specialists
+
+
+##### But who is insured where and for what?
+
+---
+
+# First product (dienst) of VECOZO
+COV - Insurance Data Check (Controle op Verzekeringsgegevens)
 
 ---
 
 # COV - Controle op Verzekeringsgegevens
 
-![center](image.png)
+![center](img/cov.png)
 
 ---
 
 # Questions?
-So far?
+So far
 
 ---
 
@@ -228,9 +276,3 @@ https://www.rickneeft.dev/aspire-course-site/
 ```
 https://github.com/rneeft/workshop-avans-2-juni
 ```
-
----
-
-# NServiceBus
-
-> TODO: Explain messages, endpoints how it works

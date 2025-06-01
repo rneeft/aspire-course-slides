@@ -1,0 +1,8 @@
+
+
+    Processing | Aspire Workshop 👉 De naam van het processing project is relevant om later niet in de knoop te komen met namespaces.
+    Na de command handlers komt de volgende error: Required member 'SupplementaryHealthInsurance.HealthInsurer' must be set in the object initializer or attribute constructor.
+    
+    Bij POST /data via Postman File Upload kom ik in een soort rare dead lock waarin ASP.NET Core aangeeft start reading body  maar lijkt te hangen hierop. Wanneer ik de inhoud van het bestand als RAW post gaat het wel goed. 
+
+

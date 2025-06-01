@@ -31,3 +31,20 @@ svg[id^="mermaid-"] {
   max-width: 960px; 
   max-height: 600px; 
 }
+
+.footer{
+  /* Unset default placing inherited from the built-in theme */
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+
+    /* Place to right-bottom */
+  right: 20px;
+  bottom: 20px;
+
+  background-image: url(img/lamel.svg);
+  background-repeat: no-repeat;
+  height: 5px;
+
+}
