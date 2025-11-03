@@ -4,7 +4,14 @@ paginate: true
 theme: my-theme
 ---
 
-# .NET Aspire
+# ~~.NET~~ Aspire
+
+![bg 75% left:40% .aspire-logo](img/aspire.svg)
+
+## Rick Neeft
+---
+
+# ~~.NET~~ Aspire
 
 **A new stack for building cloud-native apps in .NET**
 
@@ -25,6 +32,10 @@ theme: my-theme
 
 ---
 
+![bg 100%](img/AppHost.png)
+
+---
+
 # Dev Experience
 
 - Works with Docker, containers, and Azure
@@ -38,7 +49,16 @@ theme: my-theme
 - Microservices architecture
 - Internal developer platforms
 - Event-driven apps and APIs
-- Teams building with .NET 8+
+- ~~Teams building with .NET 8+~~
+
+---
+
+# What we will do
+- Run SQL server with Aspire
+- Add the projects
+- Add the migrations 
+
+![bg 100% right:50%](https://www.rickneeft.dev/aspire-course-site/docs/Aspire/aspire-dashboard.png)
 
 ---
 
